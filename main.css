@@ -7,6 +7,12 @@
     --light: #EEE;
     --pink: #ec4899;
     --purple: #8b5cf6;
+
+    --yellow: #EC994B;
+    --gray: #F3E9DD;
+
+    --red: #EF6D6D;
+
 }
 
 /*建立所有HTML元素*/
@@ -65,7 +71,7 @@ input, button {
 }
 
 #task-submit {
-    color: var(--pink);
+    color: var(--yellow);
     font-size: 1.5rem;
     font-weight: 700;
     transition: 0.4s;
@@ -124,13 +130,13 @@ main {
 }
 
 .edit {
-    color: var(--pink);
+    color: var(--yellow);
     font-size: 1.2rem;
     text-transform: uppercase;
 }
 
 .delete {
-    color: crimson;
+    color: var(--red);
     font-size: 1.2rem;
     text-transform: uppercase;
 }
