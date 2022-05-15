@@ -1,0 +1,144 @@
+/*建立全域變數*/
+:root {
+    --dark: #374151;
+    --darker: #1f2937;
+    --darkest: #111827;
+    --gray: #6B7280;
+    --light: #EEE;
+    --pink: #ec4899;
+    --purple: #8b5cf6;
+}
+
+/*建立所有HTML元素*/
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Fira sans', sans-serif;
+    
+}
+
+/*css對頁面內容區的整體設定,通常情況下只在這裡設定頁面背景色或背景圖和常規字型的樣式*/
+body {
+    display: flex; /*當我們將父元素加入 display: flex;屬性時，內容物會依照交錯軸線排列成一行*/
+    flex-direction: column; /* 如果我們想將內容物呈現直向排列，可以透過 flex-direction 來設定。*/
+    min-height: 100vh;
+    background: var(--dark);
+    color: #FFF;
+}
+
+header {
+    padding: 2rem 1rem; /*padding 本身就是內距的設定，padding 是不可以設定負值的唷！這點與 margin 不同*/
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+
+}
+
+header h1 {
+    font-size: 2.5rem; /*字體大小*/
+    font-weight: 300; /*字體粗細*/
+    color: var(--gray);
+    margin-bottom: 1.5rem; /*性用于设置元素的底部外边距*/
+}
+
+#task-form {
+    display: flex; /*輸入框及按鈕會靠近*/
+
+
+}
+
+input, button {
+    appearance: none; /* 取消掉瀏覽器給的預設外觀*/
+    border: none; /* 無邊匡*/
+    outline: none;
+    background: none;
+}
+
+#task-input {
+    flex: 110%;
+    background-color: var(--darker);
+    padding: 1.3rem; /*內距*/
+    border-radius: 1rem; /*邊匡圓角*/
+    margin-right: 0.8rem; /*右邊距離*/
+    color: var(--light);
+    font-size: 1.5rem;
+}
+
+#task-submit {
+    color: var(--pink);
+    font-size: 1.5rem;
+    font-weight: 700;
+    transition: 0.4s;
+    /*
+    background-image: linear-gradient(to right, var(--pink),var(--purple));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    
+    */
+}
+
+/*鼠標停滯淡出效果*/
+#task-submit:hover {
+    opacity: 0.8;
+}
+
+#task-submit:active {
+    opacity: 0.5;
+}
+
+main {
+    flex: 110%;
+    padding: 2rem 1rem;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.task-list {
+    padding: auto;
+}
+
+
+.task-list h2 {
+    font-size: 1.6rem; /*字體大小*/
+    font-weight: 300; /*字體粗細*/
+    color: var(--gray);
+    margin-bottom: 1.5rem; /*性用于设置元素的底部外边距*/
+}
+
+#tasks .task {
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--darkest);
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+#tasks .task .content .text {
+    color: var(--light);
+    font-size: 1.2rem;
+    width: 100%;
+    display: block; /*規定元素以區塊方式呈現*/
+}
+
+.edit {
+    color: var(--pink);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.delete {
+    color: crimson;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.task .actions button:hover {
+    opacity: 0.8;
+}
+
+.task .actions button:active {
+    opacity: 0.6;
+}
